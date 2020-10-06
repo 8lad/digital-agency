@@ -1,0 +1,35 @@
+$text: #999999;
+$white: #fff;
+$bg: #E5E5E5;
+$buttonColor: #4985FF;
+$grayBg: #F6F6F8;
+$blueBg: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%),
+#C4C4C4;
+@mixin Montserrat-800 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+}
+
+@mixin Montserrat-700 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin Montserrat-600 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin Montserrat-500 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@mixin Montserrat-400 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}

@@ -1,0 +1,134 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+@import 'media';
+// Start header
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba( #A1A1A1, .5);
+    .nav {
+        @include Montserrat-500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $white;
+        text-align: right;
+        margin-right: 120px;
+        margin-bottom: 40px;
+        &__menu {
+            list-style: none;
+            li {
+                display: inline-block;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: relative;
+                a {
+                    display: block;
+                    width: 100%;
+                    color: $white;
+                }
+            }
+            li::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background-color: $white;
+                top: 60px;
+                left: 0;
+                transition: all .5s;
+            }
+            li:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+            li.active {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $white;
+                    top: 60px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+// End header
+// Start main
+.main {
+    &__wrapper {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        color: $white;
+        background-attachment: fixed;
+    }
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__box {
+        display: block;
+        text-align: center;
+        &-label {
+            @include Montserrat-500;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        &-title,
+        h1 {
+            @include Montserrat-800;
+            font-size: 48px;
+            line-height: 64px;
+            margin-bottom: 50px;
+            max-width: 830px;
+        }
+    }
+}
+
+// End main
+// Start creation
+// End creation
+.creation {
+    padding-top: 110px;
+    padding-bottom: 105px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section__title,
+    h2 {
+        margin-bottom: 50px;
+    }
+    &__text,
+    p {
+        @include Montserrat-400;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        color: $text;
+        max-width: 750px;
+        margin-bottom: 70px;
+    }
+    &__boxes {
+        display: flex;
+    }
+    &__box {
+        max-width: 355px;
+        width: 100%;
+    }
+}
